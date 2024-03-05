@@ -1,0 +1,28 @@
+[versions]
+
+kotlin = "1.9.10"
+ktlint = "0.50.0"
+detekt = "1.23.1"
+kotest = "5.7.2"
+mockk = "1.13.8"
+
+[libraries]
+
+ktlint-gradle = {module = "com.pinterest:ktlint", version.ref = "ktlint"}
+kotlin-gradle-plugin = {module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin"}
+detekt-cli = {module = "io.gitlab.arturbosch.detekt:detekt-cli", version.ref = "detekt"}
+
+kotest-runner = {module = "io.kotest:kotest-runner-junit5", version.ref = "kotest"}
+mockk-runner = {module = "io.mockk:mockk", version.ref = "mockk"}
+
+[plugins]
+
+
+
+[bundles]
+
+testing = [
+    'kotest-runner',
+    'mockk-runner'
+]
+
